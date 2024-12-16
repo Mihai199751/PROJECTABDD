@@ -5,29 +5,40 @@
 -------------------------------------------------------------------------
 
 connect schemaCommunUser/Motdepasse1234@esigloca;
------------------------------------------------------------------------------
-      -- drop des views concernant les tables de Michael
------------------------------------------------------------------------------
-DROP VIEW SGPC_UTILISATEUR_VIEW;
-DROP VIEW SGPC_MARQUE_VIEW;
-DROP VIEW SGPC_CATEGORIE_VIEW;
 
 -----------------------------------------------------------------------------
-      -- drop des views concernant les tables de Dylan
+-- drop des views concernant les tables de Mihai
 -----------------------------------------------------------------------------
+DROP VIEW CIENT_VIEW;
 
-DROP VIEW SGPC_RESERVATION_VIEW;
-DROP VIEW SGPC_SERVICE_VIEW;
-DROP VIEW SGPC_DEVIS_VIEW;
-DROP VIEW SGPC_ASSO_SER_DEV_VIEW;
+DROP VIEW OBJECTIF_VIEW;
 
 -----------------------------------------------------------------------------
-      -- drop des views concernant les tables de Kevin
+-- drop des views concernant les tables de Karim
 -----------------------------------------------------------------------------
 
-DROP VIEW SGPC_COMMANDE_VIEW;
-DROP VIEW SGPC_PRODUIT_VIEW;
-DROP VIEW SGPC_ASSO_COM_PRO_VIEW;
+DROP VIEW DEPENSE_VIEW;
+
+DROP VIEW ABONNEMENT_VIEW;
+
+DROP VIEW CATEGORIE_VIEW;
+
+-----------------------------------------------------------------------------
+-- drop des views concernant les tables de Drilon
+-----------------------------------------------------------------------------
+
+DROP VIEW TYPE_COMPTE_VIEW;
+
+DROP VIEW COMPTE_VIEW;
+
+-----------------------------------------------------------------------------
+-- drop des views concernant les tables de Romain
+-----------------------------------------------------------------------------
+
+DROP VIEW REVENU_VIEW;
+
+DROP VIEW CATEGORIE_REVENU_VIEW;
 
 DISCONNECT;
+
 EXIT;
