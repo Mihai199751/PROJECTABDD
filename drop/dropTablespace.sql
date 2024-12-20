@@ -8,7 +8,7 @@
 -- Suppression des tablespace
 -------------------------------------------------------------------------
 
-DROP TABLESPACE "SGPC_TS";
-DROP TABLESPACE "SGPC_TEMP";
+DROP TABLESPACE "MKRD_TS";
+DROP TABLESPACE "MKRD_TEMP";
 
 EXIT;
