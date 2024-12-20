@@ -1,9 +1,9 @@
 -------------------------------------------------------------------------
 --Script : dropDBA.sql
 --Objet  : Suppression de l'utilisateur DBA
--- Créateur : Dylan Monteiro, Kevin Bonga, Michael Sanz
+-- Créateur : Karim, Mihail, Romain, Drilom
 -------------------------------------------------------------------------
 
-DROP USER SGPC_DBA; 
+DROP USER SGPC_DBA;
 
 EXIT;
