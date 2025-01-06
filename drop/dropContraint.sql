@@ -21,13 +21,13 @@ ALTER TABLE OBJECTIF
 
   
 -----------------------------------------------------------------------------
-      --TABLE : TYPECOMPTE - DRILLLON
+      --TABLE : TYPECOMPTE - DRILON
 ----------------------------------------------------------------------------
 ALTER TABLE TYPE_COMPTE
   DROP CONSTRAINT FK_ID_TYPE_COMPTE;
 
 -----------------------------------------------------------------------------
-      --TABLE : COMPTE - DRILLLON
+      --TABLE : COMPTE - DRILON
 ----------------------------------------------------------------------------
 
 ALTER TABLE COMPTE
