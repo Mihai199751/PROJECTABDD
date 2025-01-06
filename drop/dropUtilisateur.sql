@@ -3,6 +3,3 @@ DROP USER MihailBRZNT;
 DROP USER KarimELMZR;
 DROP USER RomainCMPNH;
 
-DROP USER ClientXavierPero;
-DROP USER PUA_SteeveGomes;
-DROP USER schemaCommunUser;
