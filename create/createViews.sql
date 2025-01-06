@@ -1,10 +1,4 @@
-﻿-------------------------------------------------------------------------
---Script : createViews.sql
---Objet  : Création des vues
--- Créateur : Dylan Monteiro, Kevin Bonga, Michael Sanz
--------------------------------------------------------------------------
-
------------------------------------------------------------------------------
+﻿-----------------------------------------------------------------------------
 -- Création des views concernant les tables de Mihai
 -----------------------------------------------------------------------------
 
@@ -28,9 +22,9 @@ CREATE VIEW CIENT_VIEW AS
 		IMAGEPATH,
 		ISACTIVE
 	FROM
-		MIHAILBRZNT.SGPC_CIENT;
+		MIHAILBRZNT.DKRM_CIENT;
 
-INNER JOIN MIHAILBRZNT.SGPC_OBJECTIF O ON ID_CLIENT=O.ID_OBJECTIF
+INNER JOIN MIHAILBRZNT.DKRM_OBJECTIF O ON ID_CLIENT=O.ID_OBJECTIF
 
 CREATE VIEW OBJECTIF_VIEW AS
 	SELECT
@@ -49,14 +43,61 @@ CREATE VIEW OBJECTIF_VIEW AS
 	FROM
 		MIHAILBRZNT.OBJECTIF;
 
-INNER JOIN MIHAILBRZNT.SGPC_COMPTE COM ON ID_COMPTE=COM.ID_COMPTE
-INNER JOIN MIHAILBRZNT.SGPC_CLIENT CLI ON ID_CLIENT=CLI.ID_CLIENT
+INNER JOIN MIHAILBRZNT.DKRM_COMPTE COM ON ID_COMPTE=COM.ID_COMPTE
+INNER JOIN MIHAILBRZNT.DKRM_CLIENT CLI ON ID_CLIENT=CLI.ID_CLIENT
 
 -----------------------------------------------------------------------------
 -- Création des views concernant les tables de Mihai
 -----------------------------------------------------------------------------
 
+CREATE VIEW OBJECTIF_VIEW AS
+	SELECT
+		ID_OBJECTIF,
+		ID_CLIENT,
+		ID_COMPTE,
+		TITRE_OBJECTIF,
+		DESCRIPTION_OBJECTIF,
+		STATUT_OBJECTIF,
+		MONTANT_CIBLE_OBJECTIF,
+		MONTANT_COTISER_OBJECTIF,
+		DATE_CREATION_OBJECTIF,
+		DATE_FIN_OBJECTIF,
+		MAGEPATH,
+		ISACTIVE
+	FROM
+		MIHAILBRZNT.OBJECTIF;
 
+INNER JOIN MIHAILBRZNT.DKRM_COMPTE COM ON ID_COMPTE=COM.ID_COMPTE
+INNER JOIN MIHAILBRZNT.DKRM_CLIENT CLI ON ID_CLIENT=CLI.ID_CLIENT
+
+-----------------------------------------------------------------------------
+-- Création des views concernant les tables de DRILON
+-----------------------------------------------------------------------------¨
+
+CREATE VIEW TYPE_COMPTE_VIEW AS
+	SELECT
+		ID_TYPE_COMPTE,
+		NOM_TYPE_COMPTE,
+		DESCRIPTION_TYPE_COMPTE,
+		ISACTIVE,
+	FROM
+		DRILONDMR.TYPE_COMPTE;
+
+INNER JOIN DRILONDMR.DKRM_COMPTE TYP ON ID_TYPE_COMPTE=TYP.ID_COMPTE
+
+CREATE VIEW COMPTE_VIEW AS
+	SELECT
+		ID_COMPTE,
+		ID_TYPE_COMPTE,
+		ID_CLIENT,
+		COM_COMPTE,
+		STAUTS_COMPTE,
+		ISACTIVE
+	FROM
+		DRILONDMR.COMPTE;
+
+INNER JOIN DRILONDMR.DKRM_TYPE_COMPTE TYP ON ID_TYPE_COMPTE=TYP.ID_COMPTE
+INNER JOIN DRILONDMR.DKRM_ID_CLIENT CLI ON ID_CLIENT=CLI.ID_CLIENT
 
 DISCONNECT;
 

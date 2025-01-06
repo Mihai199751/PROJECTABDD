@@ -8,7 +8,7 @@
 -- Suppression des tablespace
 -------------------------------------------------------------------------
 
-DROP TABLESPACE "MKRD_TS";
-DROP TABLESPACE "MKRD_TEMP";
+DROP TABLESPACE "DKRM_TS";
+DROP TABLESPACE "DKRM_TEMP";
 
 EXIT;
