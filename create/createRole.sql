@@ -35,6 +35,7 @@ GRANT SELECT ANY TABLE TO Employe;
 
 -- SchemaCommun:
 GRANT CONNECT TO SchemaCommun ;
+GRANT CREATE SESSION TO SchemaCommun ;
 GRANT CREATE ANY VIEW TO SchemaCommun ;
 GRANT SELECT ANY TABLE TO SchemaCommun;
 

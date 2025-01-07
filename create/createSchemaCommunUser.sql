@@ -19,6 +19,6 @@ GRANT "SchemaCommun" TO schemaCommunUser;
 ALTER USER schemaCommunUser DEFAULT ROLE "SchemaCommun";
 
 -- SYSTEM PRIVILEGES
-GRANT CREATE SESSION TO schemaCommunUser;
+
 
 EXIT;
