@@ -10,6 +10,7 @@ Créateur : Drilon DEMIRI
 CREATE USER ClientUser IDENTIFIED BY "Motdepasse1234"  
 DEFAULT TABLESPACE "DKRM_TS"
 TEMPORARY TABLESPACE "DKRM_TEMP";
+PROFILE "Profile_Utilisateur_Final";
 
 -- QUOTAS
 
