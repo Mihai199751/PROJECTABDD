@@ -11,37 +11,30 @@ Créateur : Drilon Demiri
 -----------------------------------------------------
 
 CREATE ROLE Developpeur;
-CREATE ROLE AppAdmin;
 CREATE ROLE UtilisateurFinal;
+CREATE ROLE Employe;
 CREATE ROLE SchemaCommun;
 
 -----------------------------------------------------
--- Privileges Objet
+-- Privileges
 -----------------------------------------------------
 
 -- Developpeur:
 GRANT CONNECT TO Developpeur;
-
--- AppAdmin: DBA role
-GRANT ALL PRIVILEGES TO AppAdmin;
+GRANT RESOURCE TO Developpeur ;
+GRANT CREATE SYNONYM TO Developpeur ;
 
 -- UtilisateurFinal:
 GRANT CONNECT TO UtilisateurFinal;
 GRANT SELECT ANY TABLE TO UtilisateurFinal;
 
+-- Employe
+GRANT CONNECT TO Employe;
+GRANT SELECT ANY TABLE TO Employe;
+
 -- SchemaCommun:
-GRANT CREATE VIEW TO SchemaCommun;
-
------------------------------------------------------
--- Privileges Système
------------------------------------------------------
-
--- AppAdmin: accès illimité
-GRANT UNLIMITED TABLESPACE TO AppAdmin;
-
--- Developpeur: création d'objets spécifiques
-GRANT CREATE VIEW TO Developpeur;
-GRANT CREATE TABLE TO Developpeur;
-GRANT CREATE SYNONYM TO Developpeur;
+GRANT CONNECT TO SchemaCommun ;
+GRANT CREATE ANY VIEW TO SchemaCommun ;
+GRANT SELECT ANY TABLE TO SchemaCommun;
 
 EXIT;
