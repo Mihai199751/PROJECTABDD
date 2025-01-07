@@ -1,8 +1,10 @@
+/*
 -------------------------------------------------------------------------
--- Script : createRole.sql
--- Objet  : Création des rôles et attribution des privilèges
--- Créateur : Drilon Demiri
+Script : createRole.sql
+Objet  : Création des rôles et attribution des privilèges
+Créateur : Drilon Demiri
 -------------------------------------------------------------------------
+*/
 
 -----------------------------------------------------
 -- Create roles

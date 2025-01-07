@@ -1,3 +1,11 @@
+/*
+-------------------------------------------------------------------------
+Script : createUsers.sql
+Objet  : Création des utilisateurs
+Créateur : Mihail, Drilon, Karim, Romain
+-------------------------------------------------------------------------
+*/
+
 -- PROFILE
 
 CREATE PROFILE DevProfile LIMIT 
@@ -7,7 +15,7 @@ CREATE PROFILE DevProfile LIMIT
     FAILED_LOGIN_ATTEMPTS 3
     PASSWORD_REUSE_TIME 365
     PASSWORD_REUSE_MAX 5
-    PASSWORD_VERIFY_FUNCTION ora12c_verify_function;
+    PASSWORD_VERIFY_FUNCTION ora12c_verify_function; -- à mettre dans un fichier à part
 
 -- USER SQL
 
@@ -43,16 +51,16 @@ ALTER USER RomainCMPNH QUOTA UNLIMITED ON MKRD_TS;
 
 -- ROLES
 
-GRANT "DEVELOPPEUR" TO DrilonDMR ;
+GRANT "Developpeur" TO DrilonDMR ;
 GRANT RESOURCE TO DrilonDMR ;
 
-GRANT "DEVELOPPEUR"  TO MihailBRZNT ;
+GRANT "Developpeur"  TO MihailBRZNT ;
 GRANT RESOURCE TO MihailBRZNT ;
 
-GRANT "DEVELOPPEUR"  TO KarimELMZR ;
+GRANT "Developpeur"  TO KarimELMZR ;
 GRANT RESOURCE TO KarimELMZR ;
 
-GRANT "DEVELOPPEUR"  TO RomainCMPNH ;
+GRANT "Developpeur"  TO RomainCMPNH ;
 GRANT RESOURCE TO RomainCMPNH ;
 
 -- SYSTEM PRIVILEGES

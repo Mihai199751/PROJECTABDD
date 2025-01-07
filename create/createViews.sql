@@ -1,8 +1,16 @@
-﻿-----------------------------------------------------------------------------
+﻿/*
+-------------------------------------------------------------------------
+Script : createUsers.sql
+Objet  : Création des utilisateurs
+Créateur : Mihail, Drilon, Karim, Romain
+-------------------------------------------------------------------------
+*/
+
+-----------------------------------------------------------------------------
 -- Création des views concernant les tables de Mihai
 -----------------------------------------------------------------------------
 
-CREATE VIEW CIENT_VIEW AS
+CREATE VIEW CLIENT_VIEW AS
 	SELECT
 		ID_CLIENT,
 		NOM_CLIENT,
