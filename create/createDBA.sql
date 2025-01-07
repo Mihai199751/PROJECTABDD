@@ -1,8 +1,4 @@
--------------------------------------------------------------------------
---Script : createDBA.sql
---Objet  : Création de l'utilisateur DBA
--- Créateur : Dylan Monteiro
--------------------------------------------------------------------------
+---------------------
 
 -- USER SQL
 CREATE USER SGPC_DBA IDENTIFIED BY "Motdepasse1234"  
