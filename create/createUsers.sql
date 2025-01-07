@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 -- PROFILE
 
 CREATE PROFILE DevProfile LIMIT 
@@ -10,7 +8,6 @@ CREATE PROFILE DevProfile LIMIT
     PASSWORD_REUSE_TIME 365
     PASSWORD_REUSE_MAX 5
     PASSWORD_VERIFY_FUNCTION ora12c_verify_function;
->>>>>>> 4b512aab37d5898932fdd545303d50532e58ae26
 
 -- USER SQL
 
