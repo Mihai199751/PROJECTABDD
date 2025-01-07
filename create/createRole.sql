@@ -21,12 +21,13 @@ CREATE ROLE SchemaCommun;
 
 -- Developpeur:
 GRANT CONNECT TO Developpeur;
-GRANT RESOURCE TO Developpeur ;
-GRANT CREATE SYNONYM TO Developpeur ;
+GRANT RESOURCE TO Developpeur;
+GRANT CREATE TABLE TO Developpeur;
+GRANT CREATE VIEW TO Developpeur;
+GRANT CREATE SYNONYM TO Developpeur;
 
 -- UtilisateurFinal:
 GRANT CONNECT TO UtilisateurFinal;
-GRANT SELECT ANY TABLE TO UtilisateurFinal;
 
 -- Employe
 GRANT CONNECT TO Employe;
