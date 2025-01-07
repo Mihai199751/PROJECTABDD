@@ -1,24 +1,45 @@
 -------------------------------------------------------------------------
---Script : createRole.sql
---Objet  : Création des roles
+-- Script : createRole.sql
+-- Objet  : Création des rôles et attribution des privilèges
 -- Créateur : Drilon Demiri
 -------------------------------------------------------------------------
 
--- Create role
+-----------------------------------------------------
+-- Create roles
+-----------------------------------------------------
 
 CREATE ROLE Developpeur;
 CREATE ROLE AppAdmin;
+CREATE ROLE UtilisateurFinal;
 CREATE ROLE SchemaCommun;
 
--- ROLES
-GRANT "CONNECT" TO SchemaCommun ;
+-----------------------------------------------------
+-- Privileges Objet
+-----------------------------------------------------
 
--- SYSTEM PRIVILEGES
-GRANT CREATE VIEW TO SchemaCommun ;
+-- Developpeur:
+GRANT CONNECT TO Developpeur;
 
-
--- Grant privileges
-
+-- AppAdmin: DBA role
 GRANT ALL PRIVILEGES TO AppAdmin;
+
+-- UtilisateurFinal:
+GRANT CONNECT TO UtilisateurFinal;
+GRANT SELECT ANY TABLE TO UtilisateurFinal;
+
+-- SchemaCommun:
+GRANT CREATE VIEW TO SchemaCommun;
+
+-----------------------------------------------------
+-- Privileges Système
+-----------------------------------------------------
+
+-- AppAdmin: accès illimité
+GRANT UNLIMITED TABLESPACE TO AppAdmin;
+
+-- Developpeur: création d'objets spécifiques
+GRANT CREATE VIEW TO Developpeur;
+GRANT CREATE TABLE TO Developpeur;
+GRANT CREATE SYNONYM TO Developpeur;
 
 EXIT;
